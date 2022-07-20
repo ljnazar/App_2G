@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!--Fix: IE 11 uses IE 7 mode-->
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <!--responsive web-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>---- SW 2G ----</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/estilos.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <!-- <link rel="shortcut icon" href="img/icono.ico"> -->
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <br>
+                <br>
+                <h2>Consultas 2G</h2>
+                <br>
+                <form class="form">
+                    <div class="form-row">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control input" placeholder="Ingrese Cell-ID sin G100" minlength="5" maxlength="5" autocomplete="off">
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" id="boton-buscar" class="btn btn-success float-left" onclick="getData()">Buscar</button>
+                        </div>  
+                    </div>
+                </form>
+
+                <table id="linea_default" class="table table-sm">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <div id="container_timer" class="form-row">
+                    <table id="linea1_timer" class="table table-sm">
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="row context_timer justify-content-center">
+                        <div class="col-md-6">
+                            <p class="float-right">Actualización de valores en tiempo real</p>
+                        </div>
+                        <div class="col-md-1">
+                            <h5><span id="timer">03:00</span></h5>
+                        </div>
+                        <div class="col-md-4">
+                            <button id="boton-detener" class="btn btn-outline-dark float-left">Detener</button>
+                        </div>
+                    </div>
+                    <table id="linea2_timer" class="table table-sm">
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="container_checkbox">
+                    <label class="custom-control custom-checkbox">
+                    actualizar valores en tiempo real
+                    <input type="checkbox" id="checkbox" class="custom-control-input" value="off">
+                    <span class="custom-control-indicator"></span>
+                </label>
+                </div>
+
+                <div id="loader" class="loader">Loading...</div>
+
+                <div id="mensaje"></div>
+                <div id="table"></div>
+                <div id="error"></div>
+                <div id="sran"></div>
+
+            </div>
+
+        </main>
+
+        <footer>
+        </footer>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+        <script type="text/javascript" src="/static/js/app.js"></script>
+
+    </body>
+</html>
